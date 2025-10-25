@@ -1,5 +1,5 @@
 from api_model import RequestInfo, ResultInfo
-from api import fetchRecommendProperties, fetchRecommendProperties_async
+from api import fetchRecommendProperties, fetch_recommend_properties_async
 import asyncio
 
 test_request_params = [
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     # -------- 异步调用示例 --------
     # 单请求
     async def single_request(request = request_params):
-        filtered_properties = await fetchRecommendProperties_async(request)
+        filtered_properties = await fetch_recommend_properties_async(request)
         print(f'找到{len(filtered_properties)}个房源。')
 
         # 返回结果

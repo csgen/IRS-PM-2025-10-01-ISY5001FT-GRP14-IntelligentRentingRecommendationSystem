@@ -3,7 +3,7 @@ from .func import query_housing_data_async, filter_housing_async
 import asyncio
 import time
 
-async def fetchRecommendProperties_async(params: RequestInfo) -> list[ResultInfo]:
+async def fetch_recommend_properties_async(params: RequestInfo) -> list[ResultInfo]:
     '''异步算法接口，根据请求参数返回初步过滤结果及信息'''
     housings = await query_housing_data_async(params)
     print(f'第一步得到{len(housings)}条符合条件的房源，开始处理...')
@@ -29,8 +29,8 @@ def fetchRecommendProperties(params: RequestInfo) -> list[ResultInfo]:
 
     if loop and loop.is_running():
         # 已经在异步环境中
-        coro = fetchRecommendProperties_async(params)
+        coro = fetch_recommend_properties_async(params)
         return asyncio.ensure_future(coro)  # 返回一个 Future
     else:
         # 在同步环境中
-        return asyncio.run(fetchRecommendProperties_async(params))
+        return asyncio.run(fetch_recommend_properties_async(params))

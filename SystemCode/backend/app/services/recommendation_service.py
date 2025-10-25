@@ -4,18 +4,18 @@ from pydantic import ValidationError
 from app.models import EnquiryForm, Property
 
 from app.dataservice.sql_api.api_model import RequestInfo as reqinfo, ResultInfo as resinfo
-from app.dataservice.sql_api.api import fetchRecommendProperties_async
+from app.dataservice.sql_api.api import fetch_recommend_properties_async
 
 
 # Get recommended property list (unsorted)
-async def fetchRecommendProperties(params: EnquiryForm) -> List[Property]:
+async def fetch_recommend_properties(params: EnquiryForm) -> List[Property]:
     try:
         req = reqinfo.model_validate(params.model_dump(), strict=False)
     except ValidationError as e:
         print(f"fail to convert EnquiryForm into reqinfo: {e}")
         return []
 
-    filtered_properties = await fetchRecommendProperties_async(req)
+    filtered_properties = await fetch_recommend_properties_async(req)
 
     try:
         results = [Property.model_validate(p.model_dump(), strict=False) for p in filtered_properties]

@@ -23,7 +23,7 @@ async def submit_form_handler(
     enquiry_entity = await db_service.save_enquiry(db=db, enquiry=enquiry)
 
     # get TopN recommendation
-    properties = await rec_service.fetchRecommendProperties(enquiry)
+    properties = await rec_service.fetch_recommend_properties(enquiry)
 
     # multi-objective optimization ranking
     ranked_properties: List[Property] = rec_service.multi_objective_optimization_ranking(
