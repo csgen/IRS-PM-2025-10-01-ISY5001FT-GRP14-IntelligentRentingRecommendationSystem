@@ -32,7 +32,7 @@ In conclusion, the Intelligent Recommendation System provides a highly efficient
 | :------------ |:---------------:| :-----| :-----|
 | Chen Sigen | A0326351L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e1538182@nus.edu.sg |
 | Qi Yilin | A0328843W | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
-| Ru Yanjie | A0295237W | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567C@outlook.com |
+| Ru Yanjie | A0295237W | Cloud deployment, Promotional video production| e1349375@u.nus.edu |
 | Yao Yiyang | A0294873L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567D@yahoo.com |
 
 ---
