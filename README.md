@@ -1,5 +1,5 @@
 ## SECTION 1 : PROJECT TITLE
-## Singapore Housing & Deveoplment Board - BTO Recommender System
+## Intelligent Renting Recommendation System
 
 ![22a228d07bc1e503d0bffbdc6b5e1396](https://github.com/user-attachments/assets/49206030-3ce4-46a2-a011-3c909810b6a0)
 
@@ -30,7 +30,7 @@ In conclusion, the Intelligent Recommendation System provides a highly efficient
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Chen Sigen | A0326351L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e1538182@nus.edu.sg |
+| Chen Sigen | A0326351L | Data engineering and database implementation; Preliminary Query and Filtering Module development; Final report integration| e1538182@u.nus.edu |
 | Qi Yilin | A0328843W | Backend Engineering; Cognition Layer; Documentation Contribution| e1553170@u.nus.edu |
 | Ru Yanjie | A0295237W | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567C@outlook.com |
 | Yao Yiyang | A0294873L | Front-end development, Multi-objective optimization development, Technical video production| e1349011@u.nus.edu |
@@ -55,6 +55,6 @@ In conclusion, the Intelligent Recommendation System provides a highly efficient
 ---
 ## SECTION 7 : MISCELLANEOUS
 
-`Refer to Github Folder: Miscellaneous`
+[Please click here to refer to the Miscellaneous folder](https://github.com/csgen/IRS-PM-2025-10-01-ISY5001FT-GRP14-IntelligentRentingRecommendationSystem/tree/master/Miscellaneous)
 
 ---
