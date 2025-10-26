@@ -1,19 +1,3 @@
-﻿### [ Practice Module ] Project Submission Template: Github Repository & Zip File
-
-**[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
-
-* **[ MTech Thru-Train Group Project Naming Example ]** IRS-PM-2020-01-18-IS02PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
-
-* **[ MTech Stackable Group Project Naming Example ]** IRS-PM-2020-01-18-STK02-GRP-AwsomeSG-HDB_BTO_Recommender.zip
-
-[Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
-
----
-
-### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
 ## SECTION 1 : PROJECT TITLE
 ## Singapore Housing & Deveoplment Board - BTO Recommender System
 
@@ -61,12 +45,12 @@ In conclusion, the Intelligent Recommendation System provides a highly efficient
 ---
 
 ## SECTION 5 : USER GUIDE
-Please click here to refer to the User Guide
+[Please click here to refer to the User Guide](https://github.com/csgen/IRS-PM-2025-10-01-ISY5001FT-GRP14-IntelligentRentingRecommendationSystem/blob/master/ProjectReport/Installation%20and%20User%20Guide.pdf)
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
-Please click here to refer to the Project Report
+[Please click here to refer to the Project Report](https://github.com/csgen/IRS-PM-2025-10-01-ISY5001FT-GRP14-IntelligentRentingRecommendationSystem/blob/master/ProjectReport/Group14_Project%20Report.pdf)
 
 ---
 ## SECTION 7 : MISCELLANEOUS
@@ -74,15 +58,3 @@ Please click here to refer to the Project Report
 `Refer to Github Folder: Miscellaneous`
 
 ---
-
-### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
-**This [Machine Reasoning (MR)](https://www.iss.nus.edu.sg/executive-education/course/detail/machine-reasoning "Machine Reasoning") course is part of the Analytics and Intelligent Systems and Graduate Certificate in [Intelligent Reasoning Systems (IRS)](https://www.iss.nus.edu.sg/stackable-certificate-programmes/intelligent-systems "Intelligent Reasoning Systems") series offered by [NUS-ISS](https://www.iss.nus.edu.sg "Institute of Systems Science, National University of Singapore").**
-
-**Lecturer: [GU Zhan (Sam)](https://www.iss.nus.edu.sg/about-us/staff/detail/201/GU%20Zhan "GU Zhan (Sam)")**
-
-[![alt text](https://www.iss.nus.edu.sg/images/default-source/About-Us/7.6.1-teaching-staff/sam-website.tmb-.png "Let's check Sam' profile page")](https://www.iss.nus.edu.sg/about-us/staff/detail/201/GU%20Zhan)
-
-**zhan.gu@nus.edu.sg**
