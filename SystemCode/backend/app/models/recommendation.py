@@ -1,11 +1,11 @@
 from datetime import datetime
-from typing import Optional, List, TYPE_CHECKING
+from typing import Optional, List, Dict, Any, TYPE_CHECKING
 
 from pydantic import computed_field
 from sqlalchemy import JSON, Column, DateTime, func
 from sqlmodel import Field, Relationship, SQLModel
 
-from .property import PropertyRecommand
+from .property import Property
 if TYPE_CHECKING:
     from .enquiry import EnquiryEntity
 
@@ -22,7 +22,7 @@ class Recommendation(SQLModel, table=True):
         sa_column=Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     )
     
-    recommandation_result: Optional[dict] = Field(default=None, sa_column=Column(JSON))
+    recommandation_result: Optional[List[Dict[str, Any]]] = Field(default=None, sa_column=Column(JSON))
     
     ext_info: Optional[dict] = Field(default=None, sa_column=Column(JSON))
 
@@ -31,10 +31,9 @@ class Recommendation(SQLModel, table=True):
 
 # 返回给前端的推荐结果模型
 class RecommendationResponse(SQLModel):
-    properties: List[PropertyRecommand]
+    properties: List[Property]
 
     @computed_field
     @property
     def total_count(self) -> int:
         return len(self.properties)
-    

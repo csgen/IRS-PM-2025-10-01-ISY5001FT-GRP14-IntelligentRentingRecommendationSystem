@@ -1,62 +1,54 @@
-from fastapi import APIRouter, Depends, status, HTTPException
-from sqlmodel import Session
+from fastapi import APIRouter, Depends, status
+from fastapi.responses import HTMLResponse
+from sqlmodel.ext.asyncio.session import AsyncSession
+import openai
 
-from app.database.config import get_session
+from app.dependencies import get_async_session, get_async_openai_client
+from app.dependencies import get_async_openai_client
 from app.models import EnquiryForm, EnquiryNL, PropertyLocation, RecommendationResponse
-from app.utils import mock_data
+from app.handlers import property_handler
+
 
 router = APIRouter(prefix="/api/v1/properties", tags=["properties"])
 
-MOCK_MODE = True
 
-
-# 提交问卷表单
+# Submit the questionnaire form
 @router.post("/submit-form", response_model=RecommendationResponse, status_code=status.HTTP_201_CREATED)
-def submit_form(
+async def submit_form(
     *,
-    db: Session = Depends(get_session),
+    db: AsyncSession = Depends(get_async_session),
+    client: openai.AsyncOpenAI = Depends(get_async_openai_client),
     enquiry: EnquiryForm
 ):
-    if MOCK_MODE:
-        return mock_data.create_mock_response()
-    else:
-        pass
+
+    return await property_handler.submit_form_handler(db=db, client=client, enquiry=enquiry)
 
 
-# 提交文字表单
+# Submit natural language description
 @router.post("/submit-description", response_model=RecommendationResponse, status_code=status.HTTP_201_CREATED)
-def submit_description(
+async def submit_description(
     *,
-    db: Session = Depends(get_session),
+    db: AsyncSession = Depends(get_async_session),
+    client: openai.AsyncOpenAI = Depends(get_async_openai_client),
     enquiry: EnquiryNL
 ):
-    if MOCK_MODE:
-        return mock_data.create_mock_response()
-    else:
-        pass
+
+    return await property_handler.submit_description_handler(db=db, client=client, enquiry=enquiry)
 
 
-# 获取无表单房源推荐列表
-@router.get("/recommendation-no-submit", response_model=RecommendationResponse, status_code=status.HTTP_201_CREATED)
-def recommendation_no_submit(
+# Get a list of recommended properties
+@router.get("/recommendation-no-submit", response_model=RecommendationResponse, status_code=status.HTTP_200_OK)
+async def recommendation_no_submit(
     *,
-    db: Session = Depends(get_session),
+    db: AsyncSession = Depends(get_async_session)
 ):
-    if MOCK_MODE:
-        return mock_data.create_mock_response()
-    else:
-        pass
+    return RecommendationResponse(properties=[])
 
 
-# 获取房源地图
-@router.get("/map", response_model=RecommendationResponse, status_code=status.HTTP_201_CREATED)
-def map(
+# Get the map location of a property
+@router.post("/map", response_class=HTMLResponse, status_code=status.HTTP_201_CREATED)
+async def map(
     *,
-    db: Session = Depends(get_session),
     location: PropertyLocation
 ):
-    if MOCK_MODE:
-        return mock_data.create_mock_response()
-    else:
-        pass 
-
+    return await property_handler.map_handler(location=location) 
