@@ -31,9 +31,9 @@ In conclusion, the Intelligent Recommendation System provides a highly efficient
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
 | Chen Sigen | A0326351L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e1538182@nus.edu.sg |
-| Qi Yilin | A0328843W | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
+| Qi Yilin | A0328843W | Backend Engineering; Cognition Layer; Documentation Contribution| e1553170@u.nus.edu |
 | Ru Yanjie | A0295237W | Cloud deployment, Promotional video production| e1349375@u.nus.edu |
-| Yao Yiyang | A0294873L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567D@yahoo.com |
+| Yao Yiyang | A0294873L | Front-end development, Multi-objective optimization development, Technical video production| e1349011@u.nus.edu |
 
 ---
 
