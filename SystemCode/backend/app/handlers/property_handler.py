@@ -36,7 +36,7 @@ async def submit_form_handler(
         enquiry=enquiry,
         ranked_properties=ranked_properties,
         client=client,
-        k = 3
+        k = 10 # Top10
     )
 
     # save recommendation result to db and cache
